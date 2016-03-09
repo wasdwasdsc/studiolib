@@ -50,7 +50,6 @@
     <Folder Include="studiolib\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.db" />
     <Content Include="requirements.txt" />
     <None Include="studiolib.pubxml" />
     <Content Include="studiolib\static\content\bootstrap.css" />

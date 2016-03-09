@@ -4,7 +4,7 @@ from studiolib import db
 class User(db.Model):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
-    e_mail = db.Column(db.String(64), index=True, unique=True)
+    e_mail = db.Column(db.String(64), index=True)
     pw = db.Column(db.String(64))
 
 
@@ -37,7 +37,7 @@ relation_table = db.Table('relation_table',
 class Author(db.Model):
     __tablename__ = 'authors'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64), index=True, unique=True)
+    name = db.Column(db.String(64), index=True)
     books = db.relationship('Book', secondary=relation_table, backref=db.backref('authors', lazy='dynamic'), lazy='dynamic')
 
     def __init__(self, name):
@@ -49,7 +49,7 @@ class Author(db.Model):
 class Book(db.Model):
     __tablename__ = 'books'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(64), index=True, unique=True)
+    name = db.Column(db.String(64), index=True)
 
     def __init__(self, name):
         self.name = name

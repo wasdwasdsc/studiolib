@@ -72,7 +72,7 @@ def add():
             author = models.Author.query.filter_by(name=form.a_name.data).first()
         else:
             author = models.Author(form.a_name.data)
-        if len(models.Book.query.filter_by(name=form.a_name.data).all()) != 0:
+        if len(models.Book.query.filter_by(name=form.b_name.data).all()) != 0:
             book = models.Book.query.filter_by(name=form.b_name.data).first()
         else:
             book = models.Book(form.b_name.data)
