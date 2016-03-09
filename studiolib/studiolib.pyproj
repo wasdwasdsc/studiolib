@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>feb3dbde-4172-4bae-8b33-9fc6624a9e88</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <OutputPath>.</OutputPath>
+    <StaticUriPattern>^/static/.*</StaticUriPattern>
+    <StaticUriRewrite>^/$(MSBuildProjectName)/static/.*</StaticUriRewrite>
+    <PythonWsgiHandler>$(MSBuildProjectName).app</PythonWsgiHandler>
+    <Name>studiolib</Name>
+    <RootNamespace>studiolib</RootNamespace>
+    <InterpreterId>{73355f6f-ee2b-4ac3-b188-77a661099566}</InterpreterId>
+    <InterpreterVersion>2.7</InterpreterVersion>
+    <NameOfLastUsedPublishProfile>studiolib</NameOfLastUsedPublishProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="config.py" />
+    <Compile Include="db_create.py" />
+    <Compile Include="db_migrate.py" />
+    <Compile Include="runserver.py" />
+    <Compile Include="studiolib\forms.py" />
+    <Compile Include="studiolib\models.py" />
+    <Compile Include="studiolib\__init__.py" />
+    <Compile Include="studiolib\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="studiolib\" />
+    <Folder Include="studiolib\static\" />
+    <Folder Include="studiolib\static\content\" />
+    <Folder Include="studiolib\static\fonts\" />
+    <Folder Include="studiolib\static\content\images\" />
+    <Folder Include="studiolib\static\scripts\" />
+    <Folder Include="studiolib\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.db" />
+    <Content Include="requirements.txt" />
+    <None Include="studiolib.pubxml" />
+    <Content Include="studiolib\static\content\bootstrap.css" />
+    <Content Include="studiolib\static\content\bootstrap.min.css" />
+    <Content Include="studiolib\static\content\site.css" />
+    <Content Include="studiolib\static\content\style.css" />
+    <Content Include="studiolib\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="studiolib\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="studiolib\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="studiolib\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="studiolib\static\content\images\bg.jpg" />
+    <Content Include="studiolib\static\content\images\label.png" />
+    <Content Include="studiolib\static\content\images\noise.png" />
+    <Content Include="studiolib\static\scripts\animate-bg.js" />
+    <Content Include="studiolib\static\scripts\bootstrap.js" />
+    <Content Include="studiolib\static\scripts\bootstrap.min.js" />
+    <Content Include="studiolib\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="studiolib\static\scripts\jquery-1.10.2.js" />
+    <Content Include="studiolib\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="studiolib\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="studiolib\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="studiolib\static\scripts\jquery.validate.js" />
+    <Content Include="studiolib\static\scripts\jquery.validate.min.js" />
+    <Content Include="studiolib\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="studiolib\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="studiolib\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="studiolib\static\scripts\respond.js" />
+    <Content Include="studiolib\static\scripts\respond.min.js" />
+    <Content Include="studiolib\static\scripts\scripts.js" />
+    <Content Include="studiolib\static\scripts\_references.js" />
+    <Content Include="studiolib\templates\Add.html" />
+    <Content Include="studiolib\templates\delete.html" />
+    <Content Include="studiolib\templates\display.html" />
+    <Content Include="studiolib\templates\edit.html" />
+    <Content Include="studiolib\templates\index.html" />
+    <Content Include="studiolib\templates\layout.html" />
+    <Content Include="studiolib\templates\login.html" />
+    <Content Include="studiolib\templates\register.html" />
+    <Content Include="studiolib\templates\search.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>{73355f6f-ee2b-4ac3-b188-77a661099566}</Id>
+      <BaseInterpreter>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</BaseInterpreter>
+      <Version>2.7</Version>
+      <Description>env (Python 2.7)</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <LibraryPath>Lib\</LibraryPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X86</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

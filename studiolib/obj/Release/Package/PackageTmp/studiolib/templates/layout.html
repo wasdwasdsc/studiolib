@@ -1,0 +1,39 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - eLibrary</title>
+    {% else %}
+    <title>Welcome to eLibrary</title>
+    {% endif %}
+    <link rel="stylesheet" type="text/css" href="/static/content/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js" type="text/javascript"></script>
+    <script src="/static/scripts/animate-bg.js" type="text/javascript"></script>
+    <script src="/static/scripts/scripts.js" type="text/javascript"></script>
+  </head>
+  <body>
+  <div id="container">
+	<ul id="nav">
+		<li><a href="/index">Home</a></li>
+		<li><a href="/login">login</a></li>
+		<li><a href="/register">Register</a></li>
+		<li><a href="/add">Add</a></li>
+        <li><a href="/search">Search</a></li>
+		<li><a href="/init">init</a></li>
+		<li><a href="/logout">Logout</a></li>
+		<li><a href="/display_all">Display All</a></li>
+	</ul>
+     <hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul id="messages">
+        {% for message in messages %}
+            <li>{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </div>
+  </body>
+
+</html>

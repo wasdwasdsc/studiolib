@@ -1,0 +1,18 @@
+<!-- extend from base layout -->
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Search</h1>
+  <form action="" method="post" name="add">
+      <p>
+          Please enter text to search:<br>
+          {{ form.text(size=80) }}<br>
+          {% for error in form.text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p>{{ form.by_author }} Search in authors</p>
+      <p>{{ form.by_book }} Search in books</p>
+      <p><input type="submit" value="Search"></p>
+  </form>
+{% endblock %}

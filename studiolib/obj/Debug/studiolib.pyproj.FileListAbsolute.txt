@@ -1,0 +1,15 @@
+c:\visual studio 2015\Projects\studiolib\studiolib\bin\Microsoft.PythonTools.WebRole.dll
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\attach_server.py
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\visualstudio_py_debugger.py
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\visualstudio_py_repl.py
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\visualstudio_py_util.py
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\__init__.py
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\__main__.py
+c:\visual studio 2015\Projects\studiolib\studiolib\bin\AzureSetup.cfg
+c:\visual studio 2015\Projects\studiolib\studiolib\bin\Microsoft.PythonTools.AzureSetup.exe
+c:\visual studio 2015\Projects\studiolib\studiolib\bin\Microsoft.PythonTools.AzureSetup.exe.config
+c:\visual studio 2015\Projects\studiolib\studiolib\bin\wfastcgi.py
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\deployment-updated-orig-prefix.txt
+c:\visual studio 2015\Projects\studiolib\studiolib\ptvs_virtualenv_proxy.py
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\web.config
+c:\visual studio 2015\Projects\studiolib\studiolib\obj\Debug\web.debug.config

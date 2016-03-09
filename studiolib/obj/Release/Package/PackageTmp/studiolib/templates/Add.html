@@ -1,0 +1,23 @@
+<!-- extend from base layout -->
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Add</h1>
+  <form action="" method="post" name="add">
+      <p>
+          Please enter book name:<br>
+          {{ form.b_name(size=80) }}<br>
+          {% for error in form.b_name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p>
+          Please enter author name:<br>
+          {{ form.a_name(size=80) }}<br>
+          {% for error in form.a_name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p><input type="submit" value="Add"></p>
+  </form>
+{% endblock %}

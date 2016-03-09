@@ -1,0 +1,18 @@
+<!-- extend from base layout -->
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Delete</h1>
+  <form action="" method="post" name="delete">
+      <p>
+          Please enter author or book name to delete:<br>
+          {{ form.text(size=80) }}<br>
+          {% for error in form.text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}<br>
+      </p>
+      <p>{{ form.by_author }} Delete from authors</p>
+      <p>{{ form.by_book }} Delete from books</p>
+      <p><input type="submit" value="Delete"></p>
+  </form>
+{% endblock %}

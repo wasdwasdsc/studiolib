@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>
+        Books
+    </h1>
+        <ul id="display">
+            {% for d in data %}
+                <li>{{ d }}</li>
+            {% endfor %}
+        </ul>
+    <div id="buttons">
+        <a href="/delete">Delete</a>
+        <a href="/edit">Edit</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+<!-- extend from base layout -->
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Edit</h1>
+  <form action="" method="post" name="edit">
+      <p>
+          Please enter author or book name to edit:<br>
+          {{ form.text(size=80) }}<br>
+          {% for error in form.text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </p>
+      <p>
+          Please enter new author or book name:<br>
+          {{ form.new_text(size=80) }}<br>
+          {% for error in form.new_text.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+          {% endfor %}
+      </p>
+      <p>{{ form.by_author }} Edit author</p>
+      <p>{{ form.by_book }} Edit book</p>
+      <p><input type="submit" value="Edit"></p>
+  </form>
+{% endblock %}
