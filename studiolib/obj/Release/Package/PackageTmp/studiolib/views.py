@@ -68,6 +68,9 @@ def logout():
 def add():
     form = AddForm()
     if form.validate_on_submit():
+        if ((len(models.Author.query.filter_by(name=form.a_name.data).all()) != 0) and (len(models.Book.query.filter_by(name=form.b_name.data).all()) != 0)):
+            flash("Such book is already in database")
+            return redirect("/index")
         if len(models.Author.query.filter_by(name=form.a_name.data).all()) != 0:
             author = models.Author.query.filter_by(name=form.a_name.data).first()
         else:
